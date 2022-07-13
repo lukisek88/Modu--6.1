@@ -16,23 +16,25 @@ class WeatherForecastTestSuite {
     @Mock
     private Temperatures temperaturesMock;
     private WeatherForecast weatherForecast;
-
+   private Map<String,Double> temperaturesMap;
 
     @BeforeEach
     public  void  beforeEveryTest(){
-        this.weatherForecast = new WeatherForecast(temperaturesMock);
 
-    }
-
-
-    @Test
-    void testCalculateForecastWithMock() {
-        Map<String, Double> temperaturesMap = new HashMap<>();
+        this.temperaturesMap = new HashMap<>();
         temperaturesMap.put("Rzeszow", 25.5);
         temperaturesMap.put("Krakow", 26.2);
         temperaturesMap.put("Wroclaw", 24.8);
         temperaturesMap.put("Warszawa", 25.2);
         temperaturesMap.put("Gdansk", 26.1);
+
+        this.weatherForecast = new WeatherForecast(temperaturesMock);
+    }
+
+
+    @Test
+    void testCalculateForecastWithMock() {
+        //Given
         when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         //When
         int quantityOfSensors = weatherForecast.calculateForecast().size();
@@ -45,12 +47,7 @@ class WeatherForecastTestSuite {
         public void testMedian() {
 
 //Given
-    Map<String, Double> temperaturesMap = new HashMap<>();
-    temperaturesMap.put("Rzeszow", 25.5);
-    temperaturesMap.put("Krakow", 26.2);
-    temperaturesMap.put("Wroclaw", 24.8);
-    temperaturesMap.put("Warszawa", 25.2);
-    temperaturesMap.put("Gdansk", 26.1);
+
         Double expected = 25.5;
         //When
         Double median = weatherForecast.getMediana(temperaturesMap);
@@ -63,12 +60,7 @@ class WeatherForecastTestSuite {
 @Test
     public void testAverage(){
         //Given
-            Map<String, Double> temperaturesMap = new HashMap<>();
-            temperaturesMap.put("Rzeszow", 25.5);
-            temperaturesMap.put("Krakow", 26.2);
-            temperaturesMap.put("Wroclaw", 24.8);
-            temperaturesMap.put("Warszawa", 25.2);
-            temperaturesMap.put("Gdansk", 26.1);
+
             Double expected = 25.56;
     //When
     Double average = weatherForecast.getAverage(temperaturesMap);
