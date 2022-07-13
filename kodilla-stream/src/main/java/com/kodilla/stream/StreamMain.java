@@ -27,8 +27,6 @@ public class StreamMain {
         String bText3= poemBeautifier.beautify("jestem wielki", (text -> text.replace("jestem","byłem")));
         System.out.println(bText3);
 
-        String bText4= poemBeautifier.beautify("jestem wielki", (text -> text+" mam: "+text.length()+" znaków" ));
-        System.out.println(bText4);
 
 
 
