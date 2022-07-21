@@ -5,7 +5,7 @@ public class ExceptionHandling {
         SecondChallenge secondChallenge = new SecondChallenge();
         String result = " ";
         try {
-            result = secondChallenge.probablyIWillThrowException(1,1.5);
+            result = secondChallenge.probablyIWillThrowException(1.5,1.5);
         } catch (Exception e) {
             System.out.println("Here My Exception: " + e);
         } finally {
