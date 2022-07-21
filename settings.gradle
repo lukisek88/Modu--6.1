@@ -1,4 +1,7 @@
 rootProject.name = 'kodilla-course'
 include 'kodilla-test'
 include 'kodilla-stream'
+include 'kodilla-stream:kodilla-rps'
+findProject(':kodilla-stream:kodilla-rps')?.name = 'kodilla-rps'
+include 'kodilla-rps'
 
