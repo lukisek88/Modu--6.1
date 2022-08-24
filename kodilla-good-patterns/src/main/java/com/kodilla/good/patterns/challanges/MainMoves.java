@@ -11,15 +11,12 @@ public class MainMoves {
         Map<String, List<String>> movieMap = movieStore.getMovies();
 
 
-        final String showMovies = movieMap.entrySet()
+        final String showMovies = movieMap.values()
                 .stream()
-                .flatMap(n -> {
-                    List<String> list = new ArrayList<>();
-                    list.add(n.getKey());
-                    list.addAll(n.getValue());
-                    return list.stream();
-                })
+                .flatMap(Collection::stream)
                 .collect((Collectors.joining(" ! ")));
+
+
         System.out.println(showMovies);
     }
 }
