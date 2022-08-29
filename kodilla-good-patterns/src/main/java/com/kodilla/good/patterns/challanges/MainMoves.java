@@ -16,7 +16,6 @@ public class MainMoves {
                 .flatMap(Collection::stream)
                 .collect((Collectors.joining(" ! ")));
 
-
         System.out.println(showMovies);
     }
 }
