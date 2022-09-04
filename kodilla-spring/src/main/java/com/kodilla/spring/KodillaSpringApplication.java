@@ -1,11 +1,13 @@
-package com.kodilla.spring.forum;
+package com.kodilla.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ForumMain {
+public class KodillaSpringApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(ForumMain.class,args);
+        SpringApplication.run(KodillaSpringApplication.class, args);
     }
+
 }
