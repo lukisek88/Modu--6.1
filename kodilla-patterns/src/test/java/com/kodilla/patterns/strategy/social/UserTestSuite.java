@@ -12,12 +12,12 @@ class UserTestSuite {
   public void testDefaultSharingStrategies() {
 
       //Given
-      User millennials = new Millenials("John");
+      User millenials = new Millenials("John");
       User yGeneration = new YGeneration("Arnold");
       User zGeneration = new ZGeneration("Adam");
 
       //When
-      String facebook = millennials.sharePost();
+      String facebook = millenials.sharePost();
       String twitter = yGeneration.sharePost();
       String snapchat = zGeneration.sharePost();
 
@@ -30,11 +30,11 @@ class UserTestSuite {
     public void testIndividualSharingStrategy() {
 
         //Given
-        User millennials = new Millenials("John");
-        millennials.setSocialPublisher(new FacebookPublisher());
+        User millenials = new Millenials("John");
+        millenials.setSocialPublisher(new FacebookPublisher());
 
         //When
-        String facebook = millennials.sharePost();
+        String facebook = millenials.sharePost();
 
         //Then
        assertEquals("Facebook", facebook);
