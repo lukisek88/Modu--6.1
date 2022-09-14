@@ -9,21 +9,17 @@ public class TaskFactory {
                                String taskName,
                                String colorOrWhereOrWhatToBuy,
                                String whatToPaintOrUsingOrQuantity) {
-        switch (typeOfTask) {
-            case SHOPPING:
-                return new ShoppingTask(taskName,
+      return  switch (typeOfTask) {
+            case SHOPPING ->new ShoppingTask(taskName,
                         colorOrWhereOrWhatToBuy,
                         Double.parseDouble(whatToPaintOrUsingOrQuantity));
-            case PAINTING:
-                return new PaintingTask(taskName,
+            case PAINTING -> new PaintingTask(taskName,
                         colorOrWhereOrWhatToBuy,
                         whatToPaintOrUsingOrQuantity);
-            case DRIVING:
-                return new DrivingTask(taskName,
+            case DRIVING ->new DrivingTask(taskName,
                         colorOrWhereOrWhatToBuy,
                         whatToPaintOrUsingOrQuantity);
-            default:
-                return null;
-        }
+            default -> null;
+        };
     }
 }
