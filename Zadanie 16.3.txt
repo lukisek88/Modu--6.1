@@ -21,27 +21,27 @@ VALUES
 
 INSERT INTO ISSUES (USER_ID_ASSIGNEDTO,ISSUESLIST_ID,SUMMARY,DESCRIPTION)
 VALUES
-(1,3,"TASK 1 DLA USER 1","ZROBIONE"),
-(1,3,"TASK 2 DLA USER 1","ZROBIONE"),
-(1,3,"TASK 3 DLA USER 1","ZROBIONE"),
-(1,3,"TASK 4 DLA USER 1","ZROBIONE"),
-(1,3,"TASK 5 DLA USER 1","ZROBIONE"),
+(1,3,"Done 1 dla USER 1","ZROBIONE"),
+(1,3,"Done 2 dla USER 1","ZROBIONE"),
+(1,3,"Done 3 dla USER 1","ZROBIONE"),
+(1,3,"Done 4 dla USER 1","ZROBIONE"),
+(1,3,"Done 5 dla USER 1","ZROBIONE"),
 
-(1,2,"TASK 1 DLA USERA 1","IN PROGRESS"),
-(1,2,"TASK 2 DLA USERA 1","IN PROGRESS"),
-(1,2,"TASK 3 DLA USERA 1","IN PROGRESS"),
-(1,2,"TASK 4 DLA USERA 1","IN PROGRESS"),
-(1,2,"TASK 5 DLA USERA 1","IN PROGRESS"),
+(1,2,"in progress 1 dla USER 1","IN PROGRESS"),
+(1,2,"in progress 2 dla USER 1","IN PROGRESS"),
+(1,2,"in progress 3 dla USER 1","IN PROGRESS"),
+(1,2,"in progress 4 dla USER 1","IN PROGRESS"),
+(1,2,"in progress 5 dla USER 1","IN PROGRESS"),
 
-(1,1,"TASK 1 DLA USERA 1","Do Zrobienia"),
-(1,1,"TASK 2 DLA USERA 1","Do Zrobienia"),
-(1,1,"TASK 3 DLA USERA 1","Do Zrobienia"),
-(1,1,"TASK 4 DLA USERA 1","Do Zrobienia"),
-(1,1,"TASK 5 DLA USERA 1","Do Zrobienia"),
+(1,1,"to do 1 DLA USER 1","Do Zrobienia"),
+(1,1,"to do 2 DLA USER 1","Do Zrobienia"),
+(1,1,"to do 3 DLA USER 1","Do Zrobienia"),
+(1,1,"to do 4 DLA USER 1","Do Zrobienia"),
+(1,1,"to do 5 DLA USER 1","Do Zrobienia"),
 
 
-(2,3,"TASK 1 DLA USERA 2","ZROBIONE"),
-(2,2,"TASK 1 DLA USERA 2","IN PROGRESS"),
-(2,1,"TASK 1 DLA USERA 2","Do Zrobienia");
+(2,3,"Done 1 dla USER 2","ZROBIONE"),
+(2,2,"in progress 1 dla USER 2","IN PROGRESS"),
+(2,1,"to do 1 dla USERA 2","Do Zrobienia");
 
 COMMIT;
