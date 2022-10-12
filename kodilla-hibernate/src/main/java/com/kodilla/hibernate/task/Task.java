@@ -1,9 +1,6 @@
 package com.kodilla.hibernate.task;
-
-
-
-
-
+import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.NamedQuery;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.Column;
