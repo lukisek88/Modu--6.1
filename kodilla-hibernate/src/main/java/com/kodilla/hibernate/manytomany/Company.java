@@ -8,9 +8,9 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompanyNameLike",
-
-        query = "SELECT name FROM Company WHERE SUBSTRING(name, 1 , 3) = :NAME"
-)
+        query = "SELECT * FROM COMPANIES" +
+                " WHERE LEFT(COMPANY_NAME , 3) = :NAME ",
+        resultClass = Company.class)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
