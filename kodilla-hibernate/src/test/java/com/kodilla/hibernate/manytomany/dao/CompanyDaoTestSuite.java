@@ -101,6 +101,7 @@ class CompanyDaoTestSuite {
         //Then
         assertEquals(2, lastName.size());
         assertEquals(2, nameStartedWith.size());
+        System.out.println(nameStartedWith);
 
     }
 }

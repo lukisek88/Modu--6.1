@@ -54,4 +54,9 @@ public class Company {
     private void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
+
+    @Override
+    public String toString() {
+        return "Company Name: "+name;
+    }
 }
