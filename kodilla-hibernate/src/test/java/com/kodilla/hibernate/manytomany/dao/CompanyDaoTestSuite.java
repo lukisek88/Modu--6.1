@@ -57,14 +57,15 @@ class CompanyDaoTestSuite {
         assertNotEquals(0, dataMaestersId);
         assertNotEquals(0, greyMatterId);
 
-        //CleanUp
-        //try {
-        //    companyDao.deleteById(softwareMachineId);
-        //    companyDao.deleteById(dataMaestersId);
-        //    companyDao.deleteById(greyMatterId);
-        //} catch (Exception e) {
-        //    //do nothing
-        //}
+      //  CleanUp
+       try {
+           companyDao.deleteAll();
+            companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(dataMaestersId);
+           companyDao.deleteById(greyMatterId);
+       } catch (Exception e) {
+           //do nothing
+       }
     }
     @Test
     public void testNamedQueries(){
@@ -96,12 +97,18 @@ class CompanyDaoTestSuite {
 
         //When
         List<Employee> lastName = employeeDao.retrieveEmployeeWithLastname("Smith");
-        List<Company> nameStartedWith = companyDao.retrieveCompanyNameLike("Sof");
+        List<Company> nameStartedWith = companyDao.retrieveCompanyNameLikeThree("Sof");
 
         //Then
         assertEquals(2, lastName.size());
         assertEquals(2, nameStartedWith.size());
         System.out.println(nameStartedWith);
+        //  CleanUp
+        try {
+            companyDao.deleteAll();
 
+        } catch (Exception e) {
+            //do nothing
+        }
     }
-}
+    }
