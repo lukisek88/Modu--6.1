@@ -25,4 +25,28 @@ public class Product {
                 "Product Discription: "+productDiscirption+"\n"+
                 "Unit Price: "+productPrice+" zl";
     }
+
+    public Product() {
+        super();
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+ //   @Override
+   // protected void finalize() throws Throwable {
+    //    super.finalize();
+ //   }
 }

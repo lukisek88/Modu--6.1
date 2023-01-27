@@ -4,6 +4,11 @@ public class Engine {
     static int mySum;
     static int aiSum;
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
     public void getStart(int a) {
         Moves process = new Moves();
         int round = a;
